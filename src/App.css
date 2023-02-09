@@ -1,11 +1,12 @@
 .App {
   text-align: center;
-  display: flex;
-  background-color: white;
-  position: absolute;
-  top: 0; bottom: 0; right: 0; left: 0;
+  padding-left: 10%;
+  padding-right: 5%;
 }
 
-.sidemenu {
-  width: 10%;
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
 }

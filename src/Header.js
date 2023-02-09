@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import { ReactComponent as BigLogo } from './biglogo.svg';
 import { ReactComponent as Logo } from './logo.svg';
-import {
-  ProSidebar,
-  Menu,
-  MenuItem,
-  SidebarHeader,
-  SidebarFooter,
-  SidebarContent,
-} from "react-pro-sidebar";
+import { ProSidebar, Menu, MenuItem, SidebarHeader, SidebarFooter, SidebarContent } from "react-pro-sidebar";
 import { FaList } from "react-icons/fa";
 import { FiHome, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";

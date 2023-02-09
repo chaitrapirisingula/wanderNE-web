@@ -1,23 +1,17 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import "./App.css"
+import sites from "./sites-info.json";
+import Card from "./Card";
+import "./App.css";
 
 function AllSites() {
-    let navigate = useNavigate();
-
     return (
         <div className="App">
-            <aside className="sidemenu"></aside>
-            <p>THIS IS THE SITES PAGE</p>
-            <button
-                onClick={() => {
-                navigate("/sites/:name");
-                }}
-            >
-                {" "}
-                Site
-            </button>
+            <h1>Sites</h1>
+            <div className="wrapper">
+                {sites.map((site)=><Card props={site} />)}
+            </div>
         </div>
+        
     );
 }
 
