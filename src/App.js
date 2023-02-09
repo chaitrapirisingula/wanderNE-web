@@ -8,9 +8,7 @@ import Header from './Header';
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-      </div>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sites" element={<AllSites />} />

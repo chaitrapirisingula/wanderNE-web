@@ -7,15 +7,16 @@ function AllSites() {
 
     return (
         <div className="App">
-        <p>THIS IS THE SITES PAGE</p>
-        <button
-            onClick={() => {
-            navigate("/sites/:name");
-            }}
-        >
-            {" "}
-            Site
-        </button>
+            <aside className="sidemenu"></aside>
+            <p>THIS IS THE SITES PAGE</p>
+            <button
+                onClick={() => {
+                navigate("/sites/:name");
+                }}
+            >
+                {" "}
+                Site
+            </button>
         </div>
     );
 }

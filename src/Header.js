@@ -31,7 +31,7 @@ const Header = () => {
         <div id="header">
             <ProSidebar collapsed={menuCollapse}>
             <SidebarHeader>
-            <div className="logotext">
+                <div className="logotext">
                 <p>{menuCollapse ? <Logo /> : <BigLogo />}</p>
                 </div>
                 <div className="closemenu" onClick={menuIconClick}>
