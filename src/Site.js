@@ -1,14 +1,16 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 
 function Site() {
+
   let navigate = useNavigate();
-  let { site } = useParams();
+  const location = useLocation();
+  
   return (
     <div className="App">
       <aside className="sidemenu"></aside>
-      THIS IS THE SITE PAGE FOR {site}!
+      THIS IS THE SITE PAGE FOR {location.state.name}!
       <button
         onClick={() => {
           navigate("/sites");

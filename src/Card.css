@@ -1,1 +1,12 @@
-/* TODO: style card */
+.card {
+    box-shadow:0 2px 20px gray; 
+}
+
+.card_image {
+    width: 50%;
+    height: 50%;
+}
+
+.card_button {
+    cursor: pointer;
+}
