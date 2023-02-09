@@ -10,3 +10,7 @@
 .card_button {
     cursor: pointer;
 }
+
+.card_body {
+    padding: 5%;
+}
