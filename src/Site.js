@@ -9,16 +9,18 @@ function Site() {
   
   return (
     <div className="App">
-      <aside className="sidemenu"></aside>
-      THIS IS THE SITE PAGE FOR {location.state.name}!
-      <button
-        onClick={() => {
-          navigate("/sites");
-        }}
-      >
-        {" "}
-        Change to sites page
-      </button>
+      <h1>{location.state.name}</h1>
+      <button className="back_button" onClick={() => {navigate("/sites");}}>Back to Sites</button>
+      <p>{location.state.hours}</p>
+      <div className="site_info">
+        <p>{location.state.phone}</p>
+        <p>{location.state.link}</p>
+        <p>{location.state.address.city}</p>
+      </div>
+      <div className="site_description">
+        <p>{location.state.description}</p>
+        <img className="site_image" src={location.state.image} alt=""></img>
+      </div>
     </div>
   );
 }
