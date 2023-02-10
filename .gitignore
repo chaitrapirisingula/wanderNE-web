@@ -5,7 +5,7 @@
 .eslintcache
 
 # Dependencies
-node_modules
+node_modules/
 
 # Api keys
 config.js
