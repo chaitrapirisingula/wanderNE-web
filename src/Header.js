@@ -4,7 +4,7 @@ import { ReactComponent as Logo } from './logo.svg';
 import { ProSidebar, Menu, MenuItem, SidebarHeader, SidebarFooter, SidebarContent } from "react-pro-sidebar";
 import { FaList } from "react-icons/fa";
 import { FiHome, FiArrowLeftCircle, FiArrowRightCircle } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "react-pro-sidebar/dist/css/styles.css";
 import "./Header.css";
 
@@ -44,7 +44,8 @@ const Header = () => {
             <SidebarFooter>
                 <Menu iconShape="square">
                 <div className="logotext">
-                <p>{menuCollapse ? "NSHSF" : "Nebraska State Historical Society Foundation"}</p>
+                <p style={{color: "#000080", padding: "10px"}}>{menuCollapse ? <Link style={{color: "#000080", padding: "10px"}} to="https://www.nshsf.org/">nshsf.org</Link> : 
+                    <Link style={{color: "#000080"}} to="https://www.nshsf.org/">Nebraska State Historical Society Foundation</Link>}</p>
                 </div>
                 </Menu>
             </SidebarFooter>
