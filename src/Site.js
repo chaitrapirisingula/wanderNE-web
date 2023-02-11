@@ -20,7 +20,7 @@ function Site() {
       <div className="site_description">
         <img className="site_image" src={location.state.image} alt=""></img>
         <p>{location.state.description}</p>
-        <iframe className="map" src={`https://maps.google.com/maps?q=${location.state.coordinates[0]}%20${location.state.coordinates[1]}
+        <iframe className="map" src={`https://maps.google.com/maps?q=${location.state.name}
         &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
       </div>
     </div>

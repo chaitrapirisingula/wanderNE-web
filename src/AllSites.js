@@ -11,7 +11,6 @@ function AllSites() {
                 {sites.map((site)=><Card props={site} />)}
             </div>
         </div>
-        
     );
 }
 
