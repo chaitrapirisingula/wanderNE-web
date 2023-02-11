@@ -1,7 +1,8 @@
-import React from "react";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import { useMemo } from "react";
-import './App.css';
+// import React from "react";
+// import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+// import { useMemo } from "react";
+import { Helmet } from "react-helmet";
+// import './App.css';
 
 function Map() {
 
@@ -27,6 +28,10 @@ function Map() {
     return (
         <div className="App">
             <h1> Map </h1>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Map</title>
+            </Helmet>
             {/* <GoogleMap zoom={10} center={center} mapContainerClassName="map-container">
                 <Marker position={center} />
             </GoogleMap> */}
