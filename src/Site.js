@@ -15,11 +15,13 @@ function Site() {
       <div className="site_info">
         <p>{location.state.phone}</p>
         <p>{location.state.link}</p>
-        <p>{location.state.address.city}</p>
+        <p>{location.state.address.streetAddress}, {location.state.address.city}, {location.state.address.state}, {location.state.address.postalCode}</p>
       </div>
       <div className="site_description">
-        <p>{location.state.description}</p>
         <img className="site_image" src={location.state.image} alt=""></img>
+        <p>{location.state.description}</p>
+        <iframe className="map" src={`https://maps.google.com/maps?q=${location.state.coordinates[0]}%20${location.state.coordinates[1]}
+        &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
       </div>
     </div>
   );
