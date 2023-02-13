@@ -1,13 +1,14 @@
 .main_header {
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 19rem));
   position: sticky;
   top: 0px;
   z-index: 1;
   background-color: #fbf4cd;
+  padding-left: 3%;
 }
 
 .header_button {
@@ -30,12 +31,12 @@
   grid-template-columns: repeat(auto-fit, minmax(3rem, 6rem));
 }
 
-.header_link {
-  width: 10rem;
-}
-
 .logo {
   height: 5rem;
+}
+
+.logo_wrapper {
+  justify-content: center;
 }
 
 .nshsf_logo {

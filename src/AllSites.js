@@ -2,7 +2,7 @@ import React from "react";
 import sites from "./sites-info.json";
 import Card from "./Card";
 import { Helmet } from "react-helmet";
-import "./App.css";
+import "./Design/App.css";
 
 function AllSites() {
     return (
@@ -12,7 +12,7 @@ function AllSites() {
                 <title>Sites</title>
             </Helmet>
             <h1>Sites</h1>
-            <div className="wrapper">
+            <div className="sites_wrapper">
                 {sites.map((site)=><Card props={site} />)}
             </div>
         </div>

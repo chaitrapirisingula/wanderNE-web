@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import "./App.css";
+import "./Design/Site.css";
 
 function Site() {
 
@@ -24,7 +24,6 @@ function Site() {
         </div>
       </div>
       <section className="site_body">
-        {/* style this better */}
         <button className="card_button" onClick={() => {navigate("/sites");}}>Back</button>
         <p>{location.state.hours}</p>
         <div className="site_info">

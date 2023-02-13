@@ -2,8 +2,8 @@ import { FaList, FaMap } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import WanderLogo from "./WanderNebraskaLogo.png";
-import NSHSFLogo from "./nshsflogo.png";
-import "./Header.css";
+import NSHSFLogo from "./NSHSFLogo.png";
+import "./Design/Header.css";
 
 
 const Header = () => {
@@ -12,7 +12,9 @@ const Header = () => {
 
     return (
         <header className="main_header">
-            <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
+            <div className="logo_wrapper">
+                <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
+            </div>
             <div className="header_buttons_section">
                 <button className="header_button" onClick={() => {navigate("/");}}>
                     <FiHome /><br/>Home
@@ -24,8 +26,10 @@ const Header = () => {
                     <FaMap /><br/>Map
                 </button>
             </div>
-            <a className="header_link" href={"https://nshsf.org"}><img className="nshsf_logo" src={NSHSFLogo}
-            alt="Nebraska State Historical Society Foundation"></img></a>
+            <div className="logo_wrapper">
+                <a href={"https://nshsf.org"}><img className="nshsf_logo" src={NSHSFLogo}
+                alt="Nebraska State Historical Society Foundation"></img></a>
+            </div>
         </header>
     );
 };

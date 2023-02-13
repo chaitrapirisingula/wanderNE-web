@@ -1,10 +1,10 @@
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Home';
 import AllSites from './AllSites';
 import Site from './Site';
 import Header from './Header';
 import Map from './Map';
+import './Design/App.css';
 
 function App() {
   return (
