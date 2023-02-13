@@ -1,8 +1,8 @@
-import {  Menu, MenuItem } from "react-pro-sidebar";
 import { FaList, FaMap } from "react-icons/fa";
 import { FiHome } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
-import WanderLogo from "./WanderNebraskaLogo.png"
+import WanderLogo from "./WanderNebraskaLogo.png";
+import NSHSFLogo from "./nshsflogo.png";
 import "./Header.css";
 
 
@@ -12,14 +12,19 @@ const Header = () => {
 
     return (
         <header className="main_header">
-            <img src={WanderLogo} className="logo"/>
-            <Menu iconShape="square">
-                <MenuItem icon={<FiHome />} onClick={() => {navigate("/");}}>Home</MenuItem>
-                <MenuItem icon={<FaList />} onClick={() => {navigate("/sites");}}>Sites</MenuItem>
-                <MenuItem icon={<FaMap />} onClick={() => {navigate("/map");}}>Map</MenuItem>
-            </Menu>
-            <a href={"https://nshsf.org"}><img className="nshsf_logo" src=
-            "https://www.nshsf.org/wp-content/uploads/2021/02/NSHSF_Logo-e1552276800426.gif" 
+            <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
+            <div className="header_buttons_section">
+                <button className="header_button" onClick={() => {navigate("/");}}>
+                    <FiHome /><br/>Home
+                </button>
+                <button className="header_button" onClick={() => {navigate("/sites");}}>
+                    <FaList /><br/>Sites
+                </button>
+                <button className="header_button" onClick={() => {navigate("/map");}}>
+                    <FaMap /><br/>Map
+                </button>
+            </div>
+            <a className="header_link" href={"https://nshsf.org"}><img className="nshsf_logo" src={NSHSFLogo}
             alt="Nebraska State Historical Society Foundation"></img></a>
         </header>
     );

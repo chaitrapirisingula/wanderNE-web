@@ -10,7 +10,7 @@ function Site() {
   const location = useLocation();
   
   return (
-    <div className="App">
+    <div className="site_main">
       <Helmet>
           <meta charSet="utf-8" />
           <title>{location.state.name}</title>
@@ -24,6 +24,8 @@ function Site() {
         </div>
       </div>
       <section className="site_body">
+        {/* style this better */}
+        <button className="card_button" onClick={() => {navigate("/sites");}}>Back</button>
         <p>{location.state.hours}</p>
         <div className="site_info">
           <p>{location.state.phone}</p>
