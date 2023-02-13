@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   padding-left: 10%;
-  padding-right: 5%;
+  padding-right: 10%;
+  position: relative;
 }
 
 .wrapper {
@@ -12,22 +13,8 @@
     overflow-y: scroll;
 }
 
-.back_button {
-  cursor: pointer;
-  padding: 10px 60px;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 1rem;
-  border: 2px solid #000080;
-  background: transparent;
-  color: #000080;
-}
-
-.site_image {
-  padding-top: 10%;
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
+.header {
+  position: sticky;
 }
 
 .site_info {
@@ -51,4 +38,31 @@
   height: 70%;
   object-fit: cover;
   border: none;
+}
+
+.site_image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.site_body {
+  padding-left: 10%;
+  text-align: center;
+}
+
+.head_text {
+  position: relative;
+}
+
+.head_image {
+  height: 500px;
+}
+
+.text_on_image {
+  position: absolute;
+  color: white;
+  right: 10%;
+  left: 10%;
+  bottom: 40%;
 }
