@@ -28,15 +28,18 @@ function Site() {
         <div className="site_info">
           <p>{location.state.Hours}</p>
           <a href={"https://" + location.state.Link}>{location.state.Link}</a>
-          <p>{location.state.StreetAddress}, {location.state.City}, {location.state.State}, {location.state.PostalCode}</p>
           <p>{location.state.Phone}</p>
         </div>
         <div className="site_contact_info">
           <p>Contact</p>
         </div>
-        {/* <iframe title="map" className="site_map" src={`https://maps.google.com/maps?q=${location.state.name}
-          &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe> */}
       </section>
+      <div className="site_map_section">
+        <p>{location.state.StreetAddress}, {location.state.City}, {location.state.State}, {location.state.PostalCode}</p>
+        <iframe title="map" className="site_map" src={`https://maps.google.com/maps?q=
+        ${location.state.Name + " " + location.state.City + " " + location.state.State}
+            &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
+      </div>
     </div>
   );
 }

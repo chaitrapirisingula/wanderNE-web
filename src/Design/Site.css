@@ -1,3 +1,7 @@
+.site_main {
+    padding-bottom: 10%;
+}
+
 .site_image {
     width: 100%;
     height: 20rem;
@@ -10,5 +14,16 @@
     gap: 2rem;
     justify-content: center;
     text-align: center;
-    padding-bottom: 10%;
+    padding: 1rem;
+}
+
+.site_map {
+    border: none;
+    padding: 1rem;
+}
+
+.site_map_section {
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
 }

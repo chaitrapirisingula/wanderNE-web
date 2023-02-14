@@ -19,7 +19,6 @@ function App() {
         download: true,
         header: true,
         complete: function(results) {
-          console.log(results.data)
           setData(results.data)
         }
       })
