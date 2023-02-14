@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Papa from 'papaparse';
 import Home from './Home';
 import AllSites from './AllSites';
 import Site from './Site';
@@ -14,11 +15,14 @@ function App() {
 
   const getData = async () => {
     try {
-      const res = await fetch(
-        process.env.REACT_APP_DATA_API_LINK
-      );
-      const data = await res.json();
-      setData(Object.keys(data).map((key) => data[key]));
+      Papa.parse(process.env.REACT_APP_PAPAPARSE_LINK, {
+        download: true,
+        header: true,
+        complete: function(results) {
+          console.log(results.data)
+          setData(results.data)
+        }
+      })
     } catch (error) {
       console.log(error);
     }
