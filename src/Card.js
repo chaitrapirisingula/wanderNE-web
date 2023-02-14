@@ -9,12 +9,12 @@ function Card( { props } ) {
   return (
     <div className="card"> 
       <div className="card_body">
-        <img className="card_image" src={props.image} alt=""></img>
+        <img className="card_image" src={props.Image} alt=""></img>
         <div className="card_info_section">
-          <h3 className="card_title">{props.name}</h3>
-          <p className="card_description">{props.address.city}, {props.address.state}</p>
+          <h3 className="card_title">{props.Name}</h3>
+          <p className="card_description">{props.City}, {props.State}</p>
         </div>
-        <button className="card_button" onClick={() => {navigate("/sites/" + props.name, { state: props });}}>View</button>
+        <button className="card_button" onClick={() => {navigate("/sites/" + props.Name, { state: props });}}>View</button>
       </div>
     </div>
   );
