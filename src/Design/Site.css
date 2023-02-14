@@ -1,16 +1,16 @@
 .site_info {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
     gap: 2rem;
-    justify-content: center;
+    justify-content: center; */
 }
   
 .site_description {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem, 19rem));
     gap: 5rem;
     justify-content: center;
-    padding: 5%;
+    padding: 5%; */
 }
   
 .site_map {
@@ -23,27 +23,28 @@
   
 .site_image {
     width: 100%;
-    height: 70%;
+    height: 20rem;
     object-fit: cover;
 }
   
 .site_body {
-    padding-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    gap: 2rem;
+    justify-content: center;
     text-align: center;
 }
-  
-.head_text {
-    position: relative;
-}
-  
-.head_image {
-    height: 500px;
-}
-  
-.text_on_image {
-    position: absolute;
-    color: white;
-    right: 10%;
-    left: 10%;
-    bottom: 40%;
+
+.back_button {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #000080;
+    background: transparent;
+    color: #000080;
+    width: 40%;
+    max-width: 100%;
+    max-height: 100%;
+    height: 10%;
+    text-align: center;
 }
