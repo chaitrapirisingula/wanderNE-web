@@ -10,20 +10,32 @@
   
 .site_body {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    grid-template-columns: 25% 25% 25%;
     gap: 2rem;
     justify-content: center;
     text-align: center;
     padding: 1rem;
 }
 
-.site_map {
-    border: none;
+.site_name {
+    font-size: 1.5rem;
+    border-style: dotted; 
+    border-width: 0.5rem;
+    border-color: #fbf4cd;
     padding: 1rem;
+    overflow-wrap: break-word;
 }
 
-.site_map_section {
-    justify-content: center;
-    text-align: center;
+.site_description {
+    font-size: 1.5rem;
+    border-style: dotted; 
+    border-width: 0.5rem;
+    border-color: #000080;
     padding: 1rem;
+    overflow-wrap: break-word;
+}
+
+.site_map {
+    border: none;
+    padding: 0.5rem;
 }
