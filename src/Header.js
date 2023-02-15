@@ -1,5 +1,4 @@
-import { FaList, FaMap } from "react-icons/fa";
-import { FiHome } from "react-icons/fi";
+import { FaHome, FaLocationArrow, FaBookReader } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import WanderLogo from "./WanderNebraskaLogo.png";
 import NSHSFLogo from "./NSHSFLogo.png";
@@ -17,13 +16,28 @@ const Header = () => {
             </div>
             <div className="header_buttons_section">
                 <button className="header_button" onClick={() => {navigate("/");}}>
-                    <FiHome /><br/>Home
+                    <div className="button_image">
+                        <FaHome />
+                    </div>
+                    <div className="button_description">
+                        Home
+                    </div>
                 </button>
                 <button className="header_button" onClick={() => {navigate("/sites");}}>
-                    <FaList /><br/>Sites
+                    <div className="button_image">
+                        <FaLocationArrow />
+                    </div>
+                    <div className="button_description">
+                        Sites
+                    </div>
                 </button>
-                <button className="header_button" onClick={() => {navigate("/map");}}>
-                    <FaMap /><br/>Map
+                <button className="header_button" onClick={() => {navigate("/libraries");}}>
+                    <div className="button_image">
+                        <FaBookReader />
+                    </div>
+                    <div className="button_description">
+                        Libraries
+                    </div>
                 </button>
             </div>
             <div className="logo_wrapper">

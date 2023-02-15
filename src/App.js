@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './Home';
-import AllSites from './AllSites';
+import Sites from './Sites';
 import Site from './Site';
 import Header from './Header';
 import Footer from "./Footer";
-import Map from './Map';
+import Libraries from "./Libraries";
 import './Design/App.css';
 
 function App() {
@@ -13,9 +13,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sites" element={<AllSites />} />
+        <Route path="/sites" element={<Sites />} />
         <Route path="/sites/:site" element={<Site />} />
-        <Route path="/map" element={<Map />} />
+        <Route path="/libraries" element={<Libraries />} />
       </Routes>
       <Footer />
     </Router>

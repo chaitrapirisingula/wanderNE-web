@@ -6,7 +6,7 @@ import ReactLoading from "react-loading";
 import Papa from 'papaparse';
 import "./Design/App.css";
 
-function AllSites() {
+function Libraries() {
 
     const [loaded, setLoaded] = useState(false)
 
@@ -35,11 +35,11 @@ function AllSites() {
         <div className="App">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Sites</title>
+                <title>Libraries</title>
             </Helmet>
-            <h1>Sites</h1>
+            <h1>Libraries</h1>
             <div className="sites_wrapper">
-                {data.map((site)=><Card props={site} />)}
+                {data.map((site)=> site.Category.replace(/ /g, '') === "Library" ? <Card props={site} /> : "")}
             </div>
         </div>
     ) : (
@@ -48,7 +48,7 @@ function AllSites() {
                 <meta charSet="utf-8" />
                 <title>Sites</title>
             </Helmet>
-            <h1>Sites</h1>
+            <h1>Libraries</h1>
             <div className="loading">
                 <ReactLoading
                 color="#fbf4cd"
@@ -60,4 +60,4 @@ function AllSites() {
     );
 }
 
-export default AllSites;
+export default Libraries;

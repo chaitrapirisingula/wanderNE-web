@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import WanderDefaultImage from "./WanderDefaultImage.png";
 import "./Design/Card.css";
 
 function Card( { props } ) {
@@ -9,7 +10,8 @@ function Card( { props } ) {
   return (
     <div className="card"> 
       <div className="card_body">
-        <img className="card_image" src={props.Image} alt=""></img>
+        {props.Image ? <img className="card_image" src={props.Image} alt={props.Name}></img> : 
+        <img className="card_image" src={WanderDefaultImage} alt={props.Name}></img>}
         <div className="card_info_section">
           <h3 className="card_title">{props.Name}</h3>
           <p className="card_description">{props.City}, {props.State}</p>

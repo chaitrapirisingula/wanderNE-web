@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import WanderNebraskaLogo from "./WanderNebraskaLogo.png";
 import "./Design/Site.css";
 import "./Design/Card.css";
 
@@ -16,7 +17,8 @@ function Site() {
           <meta charSet="utf-8" />
           <title>{location.state.Name}</title>
       </Helmet>
-      <img className="site_image" src={location.state.Image} alt=""></img>
+      {location.state.Image ? <img className="site_image" src={location.state.Image} alt={location.state.Name}></img> : 
+        <img className="site_image" src={WanderNebraskaLogo} alt={location.state.Name}></img>}
       <section className="site_body">
         <div className="site_name">
           <h1>{location.state.Name}</h1>
