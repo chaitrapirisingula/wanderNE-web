@@ -41,8 +41,10 @@ const Header = () => {
                 </button>
             </div>
             <div className="logo_wrapper">
-                <a href={"https://nshsf.org"}><img className="nshsf_logo" src={NSHSFLogo}
-                alt="Nebraska State Historical Society Foundation"></img></a>
+                <a href={"https://nshsf.org"}>
+                    <img className="nshsf_logo" src={NSHSFLogo}
+                    alt="Nebraska State Historical Society Foundation"></img>
+                </a>
             </div>
         </header>
     );

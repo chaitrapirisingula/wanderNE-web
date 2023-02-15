@@ -32,6 +32,7 @@ function Site() {
         </div>
         <div className="site_description">
           <h4>Contact</h4>
+          <p>{location.state.Contact}</p>
           <p>{location.state.ContactInformation}</p>
         </div>
         <div className="site_name">

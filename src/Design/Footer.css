@@ -5,4 +5,20 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 19rem));
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.website_link {
+    color: white;
+}
+
+.social_media {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0.5rem, 1rem));
+    justify-content: center;
 }
