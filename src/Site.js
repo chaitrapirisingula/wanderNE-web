@@ -35,7 +35,7 @@ function Site() {
         </div>
       </section>
       <div className="site_map_section">
-        <p>{location.state.StreetAddress}, {location.state.City}, {location.state.State}, {location.state.PostalCode}</p>
+        <p>{location.state.StreetAddress}, {location.state.City} {location.state.State}, {location.state.PostalCode}</p>
         <iframe title="map" className="site_map" src={`https://maps.google.com/maps?q=
         ${location.state.Name + " " + location.state.City + " " + location.state.State}
             &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
