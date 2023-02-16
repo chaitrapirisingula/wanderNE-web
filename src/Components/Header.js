@@ -1,4 +1,5 @@
-import { FaHome, FaLocationArrow, FaBookReader } from "react-icons/fa";
+import { MdOutlineHistoryEdu } from "react-icons/md";
+import { BiHomeHeart, BiBookReader, BiMapAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import WanderLogo from "../Images/WanderNebraskaLogo.png";
 import NSHSFLogo from "../Images/NSHSFLogo.png";
@@ -15,28 +16,36 @@ const Header = () => {
                 <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
             </div>
             <div className="header_buttons_section">
-                <button className="header_button" onClick={() => {navigate("/");}}>
+                <button className="header_button" onClick={() => {navigate("/");window.scrollTo(0, 0);}}>
                     <div className="button_image">
-                        <FaHome />
+                        <BiHomeHeart size={'2rem'}/>
                     </div>
                     <div className="button_description">
                         Home
                     </div>
                 </button>
-                <button className="header_button" onClick={() => {navigate("/sites");}}>
+                <button className="header_button" onClick={() => {navigate("/sites");window.scrollTo(0, 0);}}>
                     <div className="button_image">
-                        <FaLocationArrow />
+                        <MdOutlineHistoryEdu size={'2rem'}/>
                     </div>
                     <div className="button_description">
                         Sites
                     </div>
                 </button>
-                <button className="header_button" onClick={() => {navigate("/libraries");}}>
+                <button className="header_button" onClick={() => {navigate("/libraries");window.scrollTo(0, 0);}}>
                     <div className="button_image">
-                        <FaBookReader />
+                        <BiBookReader size={'2rem'}/>
                     </div>
                     <div className="button_description">
                         Libraries
+                    </div>
+                </button>
+                <button className="header_button" onClick={() => {navigate("/map");window.scrollTo(0, 0);}}>
+                    <div className="button_image">
+                        <BiMapAlt size={'2rem'}/>
+                    </div>
+                    <div className="button_description">
+                        Map
                     </div>
                 </button>
             </div>

@@ -7,7 +7,6 @@ const Footer = () => {
         <footer className="footer">
             <div className="contact_info">
                 <p>Add contact info</p>
-                <a className="website_link" href="https://nshsf.org">nshsf.org</a>
             </div>
             <div className="social_media">
                 <a className="website_link" href="https://www.facebook.com/NSHSF1942/"><FaFacebook /></a>

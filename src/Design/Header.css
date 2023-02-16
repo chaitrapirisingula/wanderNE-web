@@ -9,6 +9,7 @@
   z-index: 1;
   background-color: #fbf4cd;
   padding-left: 3%;
+  box-shadow:0 2px 10px gray; 
 }
 
 .header_button {
@@ -30,7 +31,8 @@
 
 .header_buttons_section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(3rem, 6rem));
+  grid-template-columns: repeat(auto-fit, minmax(2rem, 4rem));
+  gap: 1rem;
 }
 
 .logo {
