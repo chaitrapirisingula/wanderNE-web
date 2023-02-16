@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import WanderDefaultImage from "./WanderDefaultImage.png";
-import "./Design/Card.css";
+import WanderDefaultImage from "../Images/WanderDefaultImage.png";
+import "../Design/Card.css";
 
 function Card( { props } ) {
 
@@ -16,7 +16,7 @@ function Card( { props } ) {
           <h3 className="card_title">{props.Name}</h3>
           <p className="card_description">{props.City}, {props.State}</p>
         </div>
-        <button className="card_button" onClick={() => {navigate("/sites/" + props.Name, { state: props });}}>View</button>
+        <button className="card_button" onClick={() => {navigate("/sites/" + props.Name, { state: props });window.scrollTo(0, 0);}}>View</button>
       </div>
     </div>
   );

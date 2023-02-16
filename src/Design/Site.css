@@ -1,5 +1,5 @@
 .site_main {
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 
 .site_image {
@@ -10,7 +10,7 @@
   
 .site_body {
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 23rem));
     gap: 2rem;
     justify-content: center;
     text-align: center;
@@ -38,4 +38,14 @@
 .site_map {
     border: none;
     padding: 0.5rem;
+}
+
+.site_link {
+    color: black;
+    overflow-wrap: break-word;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }

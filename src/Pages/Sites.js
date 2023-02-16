@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "./Card";
+import Card from "../Components/Card";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
 import Papa from 'papaparse';
-import "./Design/App.css";
+import "../Design/App.css";
 
-function Libraries() {
+function Sites() {
 
     const [loaded, setLoaded] = useState(false)
 
@@ -35,11 +35,11 @@ function Libraries() {
         <div className="App">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Libraries</title>
+                <title>Sites</title>
             </Helmet>
-            <h1>Libraries</h1>
+            <h1>Historical Sites</h1>
             <div className="sites_wrapper">
-                {data.map((site)=> site.Category.replace(/ /g, '') === "Library" ? <Card props={site} /> : "")}
+                {data.map((site)=> site.Category.replace(/ /g, '') === "Historical" ? <Card props={site} /> : "")}
             </div>
         </div>
     ) : (
@@ -48,16 +48,18 @@ function Libraries() {
                 <meta charSet="utf-8" />
                 <title>Sites</title>
             </Helmet>
-            <h1>Libraries</h1>
-            <div className="loading">
-                <ReactLoading
-                color="#fbf4cd"
-                height={100}
-                width={100}
-                />
+            <h1>Historical Sites</h1>
+            <div className="loading_wrapper">
+                <div className="loading">
+                    <ReactLoading
+                    color="#fbf4cd"
+                    height={100}
+                    width={100}
+                    />
+                </div>
             </div>
         </div>
     );
 }
 
-export default Libraries;
+export default Sites;

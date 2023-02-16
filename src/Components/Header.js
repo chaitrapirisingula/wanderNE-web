@@ -1,8 +1,8 @@
 import { FaHome, FaLocationArrow, FaBookReader } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import WanderLogo from "./WanderNebraskaLogo.png";
-import NSHSFLogo from "./NSHSFLogo.png";
-import "./Design/Header.css";
+import WanderLogo from "../Images/WanderNebraskaLogo.png";
+import NSHSFLogo from "../Images/NSHSFLogo.png";
+import "../Design/Header.css";
 
 
 const Header = () => {
