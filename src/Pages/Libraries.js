@@ -9,16 +9,16 @@ import "../Design/App.css";
 
 function Libraries() {
 
-    const [loaded, setLoaded] = useState(false)
-    const libRef = collection(db, "libraries");
     const [libs, setLibs] = useState();
+    const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
         const getSites = async () => {
-          const data = await getDocs(libRef)
-          const libsData = data.docs.map((doc) => (doc.data()));
-          setLibs(libsData)
-          setLoaded(true)
+            const libRef = collection(db, "libraries");
+            const data = await getDocs(libRef)
+            const libsData = data.docs.map((doc) => (doc.data()));
+            setLibs(libsData)
+            setLoaded(true)
         }
         getSites();
     }, [])

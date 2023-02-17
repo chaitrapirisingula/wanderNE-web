@@ -10,7 +10,7 @@ function Card( { props } ) {
   return (
     <div className="card"> 
       <div className="card_body">
-        {props.Image ? <img className="card_image" src={props.image} alt={props.name}></img> : 
+        {props.image ? <img className="card_image" src={props.image} alt={props.name}></img> : 
         <img className="card_image" src={WanderDefaultImage} alt={props.name}></img>}
         <div className="card_info_section">
           <h3 className="card_title">{props.name}</h3>

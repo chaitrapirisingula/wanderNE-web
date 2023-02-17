@@ -16,40 +16,40 @@ function Site() {
     <div className="site_main">
       <Helmet>
           <meta charSet="utf-8" />
-          <title>{location.state.Name}</title>
+          <title>{location.state.name}</title>
       </Helmet>
-      {location.state.Image ? <img className="site_image" src={location.state.Image} alt={location.state.Name}></img> : 
-        <img className="site_image" src={WanderNebraskaLogo} alt={location.state.Name}></img>}
+      {location.state.image ? <img className="site_image" src={location.state.image} alt={location.state.name}></img> : 
+        <img className="site_image" src={WanderNebraskaLogo} alt={location.state.name}></img>}
       <section className="site_body">
         <div className="site_name">
-          <h1>{location.state.Name}</h1>
-          <p>{location.state.Hours}</p>
-          {location.state.Contact ? <div className="site_link"><CgProfile />{location.state.Contact}</div> : ""}
-          {location.state.ContactInformation ? <div className="site_link"><BiMessageCheck />{location.state.ContactInformation}</div> : ""}
+          <h1>{location.state.name}</h1>
+          <p>{location.state.hours}</p>
+          {location.state.contact ? <div className="site_link"><CgProfile />{location.state.contact}</div> : ""}
+          {location.state.contactInformation ? <div className="site_link"><BiMessageCheck />{location.state.contactInformation}</div> : ""}
         </div>
         <div className="site_description">
-          <p>{location.state.Description}</p>
+          <p>{location.state.description}</p>
         </div>
         <div className="site_name">
           <h4>Contact</h4>
-          <a className="site_link" href={"https://" + location.state.Link}><FaGlobe />Website</a>
-          <div className="site_link"><FaPhone />{location.state.Phone}</div>
-          <a className="site_link" href={"https://" + location.state.SocialMedia}><FaFacebook />Facebook</a>
+          <a className="site_link" href={"https://" + location.state.link}><FaGlobe />Website</a>
+          <div className="site_link"><FaPhone />{location.state.phone}</div>
+          <a className="site_link" href={"https://" + location.state.socialMedia}><FaFacebook />Facebook</a>
         </div>
-        <div className="site_description">
-          <h4>Attractions</h4>
-          <p>{location.state.Attractions}</p>
-        </div>
+        {location.state.attractions ? <div className="site_description">
+          <h4>Nearby Attractions</h4>
+          {location.state.attractions.map((attraction)=> <p>{attraction}</p>)}
+        </div> : ""}
         <div className="site_name">
-          <p>{location.state.StreetAddress}, {location.state.City} {location.state.State}, {location.state.PostalCode}</p>
+          <p>{location.state.streetAddress}, {location.state.city} {location.state.state}, {location.state.postalCode}</p>
           <iframe title="map" className="site_map" src={`https://maps.google.com/maps?q=
-          ${location.state.Name + " " + location.state.City + " " + location.state.State}
+          ${location.state.name + " " + location.state.city + " " + location.state.state}
               &t=&z=13&ie=UTF8&iwloc=&output=embed`}></iframe>
         </div>
-        <div className="site_description">
+        {location.state.events ? <div className="site_description">
           <h4>Events</h4>
-          <p>{location.state.Events}</p>
-        </div>
+          {location.state.events.map((event)=> <p>{event}</p>)}
+        </div> : ""}
       </section>
     </div>
   );

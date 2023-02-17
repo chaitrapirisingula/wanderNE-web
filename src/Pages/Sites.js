@@ -10,11 +10,11 @@ import "../Design/App.css";
 function Sites() {
 
     const [sites, setSites] = useState([]);
-    const siteRef = collection(db, "sites");
     const [loaded, setLoaded] = useState(false);
   
     useEffect(() => {
       const getSites = async () => {
+        const siteRef = collection(db, "sites");
         const data = await getDocs(siteRef)
         const sitesData = data.docs.map((doc) => (doc.data()));
         setSites(sitesData)
