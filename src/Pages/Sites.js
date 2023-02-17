@@ -3,33 +3,25 @@ import Card from "../Components/Card";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
-import Papa from 'papaparse';
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 import "../Design/App.css";
 
 function Sites() {
 
-    const [loaded, setLoaded] = useState(false)
-
-    const [data, setData] = useState();
-
-    const getData = async () => {
-        try {
-        Papa.parse(process.env.REACT_APP_PAPAPARSE_LINK, {
-            download: true,
-            header: true,
-            complete: function(results) {
-            setData(results.data);
-            setLoaded(true);
-            }
-        })
-        } catch (error) {
-        console.log(error);
-        }
-    };
-
+    const [sites, setSites] = useState([]);
+    const siteRef = collection(db, "sites");
+    const [loaded, setLoaded] = useState(false);
+  
     useEffect(() => {
-        getData();
-    }, []);
+      const getSites = async () => {
+        const data = await getDocs(siteRef)
+        const sitesData = data.docs.map((doc) => (doc.data()));
+        setSites(sitesData)
+        setLoaded(true)
+      }
+      getSites();
+    }, [])
 
     return loaded ? (
         <div className="App">
@@ -39,7 +31,7 @@ function Sites() {
             </Helmet>
             <h1>Historical Sites</h1>
             <div className="sites_wrapper">
-                {data.map((site)=> site.Category.replace(/ /g, '') === "Historical" ? <Card props={site} /> : "")}
+                {sites.map((site)=> <Card props={site} />)}
             </div>
         </div>
     ) : (

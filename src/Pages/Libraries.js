@@ -3,33 +3,25 @@ import Card from "../Components/Card";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import ReactLoading from "react-loading";
-import Papa from 'papaparse';
+import { db } from "../firebase";
+import { collection, getDocs } from "firebase/firestore";
 import "../Design/App.css";
 
 function Libraries() {
 
     const [loaded, setLoaded] = useState(false)
-
-    const [data, setData] = useState();
-
-    const getData = async () => {
-        try {
-        Papa.parse(process.env.REACT_APP_PAPAPARSE_LINK, {
-            download: true,
-            header: true,
-            complete: function(results) {
-            setData(results.data);
-            setLoaded(true);
-            }
-        })
-        } catch (error) {
-        console.log(error);
-        }
-    };
+    const libRef = collection(db, "libraries");
+    const [libs, setLibs] = useState();
 
     useEffect(() => {
-        getData();
-    }, []);
+        const getSites = async () => {
+          const data = await getDocs(libRef)
+          const libsData = data.docs.map((doc) => (doc.data()));
+          setLibs(libsData)
+          setLoaded(true)
+        }
+        getSites();
+    }, [])
 
     return loaded ? (
         <div className="App">
@@ -39,7 +31,7 @@ function Libraries() {
             </Helmet>
             <h1>Libraries</h1>
             <div className="sites_wrapper">
-                {data.map((site)=> site.Category.replace(/ /g, '') === "Library" ? <Card props={site} /> : "")}
+                {libs.map((lib)=> <Card props={lib} />)}
             </div>
         </div>
     ) : (
