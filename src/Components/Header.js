@@ -2,7 +2,6 @@ import { MdOutlineHistoryEdu } from "react-icons/md";
 import { BiHomeHeart, BiBookReader, BiMapAlt } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import WanderLogo from "../Images/WanderNebraskaLogo.png";
-import NSHSFLogo from "../Images/NSHSFLogo.png";
 import "../Design/Header.css";
 
 
@@ -14,6 +13,9 @@ const Header = () => {
         <header className="main_header">
             <div className="logo_wrapper">
                 <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
+            </div>
+            <div className="header_message">
+                <p>Preserving and celebrating Nebraska's rich history.</p>
             </div>
             <div className="header_buttons_section">
                 <button className="header_button" onClick={() => {navigate("/");window.scrollTo(0, 0);}}>
@@ -48,12 +50,6 @@ const Header = () => {
                         Map
                     </div>
                 </button>
-            </div>
-            <div className="logo_wrapper">
-                <a href={"https://nshsf.org"}>
-                    <img className="nshsf_logo" src={NSHSFLogo}
-                    alt="Nebraska State Historical Society Foundation"></img>
-                </a>
             </div>
         </header>
     );

@@ -10,6 +10,8 @@ function Home() {
           <title>Home</title>
       </Helmet>
       <h1>Wander Nebraska</h1>
+      <div className="slideshow"></div>
+      <div className="about"></div>
     </div>
   );
 }

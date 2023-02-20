@@ -13,14 +13,14 @@ function Libraries() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        const getSites = async () => {
+        const getLibs = async () => {
             const libRef = collection(db, "libraries");
             const data = await getDocs(libRef)
             const libsData = data.docs.map((doc) => (doc.data()));
             setLibs(libsData)
             setLoaded(true)
         }
-        getSites();
+        getLibs();
     }, [])
 
     return loaded ? (
