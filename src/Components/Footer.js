@@ -15,7 +15,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className="logo_wrapper">
-                <a href={"https://www.paypal.com/donate?token=ylHM2BJWUQOHN7IcY0pfg5zI5PCkxf7S3tQZ52PgR8Io7CWHb_6WCeV8Ct-KmBK4CAORNFrGJl6Gf-TG"}>
+                <a href={"https://www.paypal.com/donate/?hosted_button_id=KUV64XBRNY2ZJ"}>
                     <img className="donate_logo" src={DonateImg}
                     alt="Donate"></img>
                 </a>    

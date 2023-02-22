@@ -15,10 +15,10 @@ function Libraries() {
     useEffect(() => {
         const getLibs = async () => {
             const libRef = collection(db, "libraries");
-            const data = await getDocs(libRef)
+            const data = await getDocs(libRef);
             const libsData = data.docs.map((doc) => (doc.data()));
-            setLibs(libsData)
-            setLoaded(true)
+            setLibs(libsData);
+            setLoaded(true);
         }
         getLibs();
     }, [])
