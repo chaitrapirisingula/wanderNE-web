@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "../Components/Card";
+import Loading from "../Components/Loading";
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
-import ReactLoading from "react-loading";
 import { db } from "../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import "../Design/App.css";
@@ -23,33 +23,16 @@ function Sites() {
       getSites();
     }, [])
 
-    return loaded ? (
+    return (
         <div className="App">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Sites</title>
             </Helmet>
             <h1>Historical Sites</h1>
-            <div className="sites_wrapper">
-                {sites.map((site)=> <Card props={site} />)}
-            </div>
-        </div>
-    ) : (
-        <div className="App">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>Sites</title>
-            </Helmet>
-            <h1>Historical Sites</h1>
-            <div className="loading_wrapper">
-                <div className="loading">
-                    <ReactLoading
-                    color="#fbf4cd"
-                    height={100}
-                    width={100}
-                    />
-                </div>
-            </div>
+            {loaded ? <div className="sites_wrapper">
+                {sites.map((site)=> <Card props={site} />)} </div> : 
+                <Loading/>}
         </div>
     );
 }
