@@ -1,5 +1,5 @@
 import { MdOutlineHistoryEdu } from "react-icons/md";
-import { BiHomeHeart, BiBookReader, BiMapAlt } from "react-icons/bi";
+import { BiHomeHeart, BiBookReader } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import WanderLogo from "../Images/WanderNebraskaLogo.png";
 import "../Design/Header.css";
@@ -13,9 +13,6 @@ const Header = () => {
         <header className="main_header">
             <div className="logo_wrapper">
                 <img src={WanderLogo} alt="Wander Nebraska" className="logo"/>
-            </div>
-            <div className="header_message">
-                <p>Preserving and celebrating Nebraska's rich history.</p>
             </div>
             <div className="header_buttons_section">
                 <button className="header_button" onClick={() => {navigate("/");window.scrollTo(0, 0);}}>
@@ -40,14 +37,6 @@ const Header = () => {
                     </div>
                     <div className="button_description">
                         Libraries
-                    </div>
-                </button>
-                <button className="header_button" onClick={() => {navigate("/map");window.scrollTo(0, 0);}}>
-                    <div className="button_image">
-                        <BiMapAlt size={'2rem'}/>
-                    </div>
-                    <div className="button_description">
-                        Map
                     </div>
                 </button>
             </div>

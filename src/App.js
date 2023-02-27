@@ -5,7 +5,6 @@ import Site from './Pages/Site';
 import Header from './Components/Header';
 import Footer from "./Components/Footer";
 import Libraries from "./Pages/Libraries";
-import Map from "./Pages/Map";
 import './Design/App.css';
 
 function App() {
@@ -17,7 +16,6 @@ function App() {
         <Route path="/sites" element={<Sites />} />
         <Route path="/sites/:site" element={<Site />} />
         <Route path="/libraries" element={<Libraries />} />
-        <Route path="/map" element={<Map />} />
       </Routes>
       <Footer />
     </Router>
