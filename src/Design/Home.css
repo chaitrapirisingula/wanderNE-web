@@ -16,12 +16,12 @@
     object-fit: cover;
 }
 
-.head_text{
+.head_text {
     position: relative;
     color: white;
 }
     
-.center_text{
+.center_text {
     position: absolute;
     top: 50%;
     left: 50%;

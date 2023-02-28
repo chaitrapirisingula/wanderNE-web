@@ -1,0 +1,13 @@
+.map {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.map_container {
+    overflow: scroll;
+}
+
+.region_info {
+    text-align: center;
+}
