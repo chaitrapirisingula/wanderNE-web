@@ -8,9 +8,9 @@
   top: 0px;
   z-index: 1;
   background-color: #fbf4cd;
-  box-shadow:0 2px 10px gray; 
-  padding-left: 0.7rem;
-  padding-right: 0.7rem;
+  box-shadow: 0 2px 10px gray; 
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .header_button {
@@ -39,6 +39,7 @@
 
 .logo {
   height: 5rem;
+  width: 15rem;
 }
 
 .logo_wrapper {
