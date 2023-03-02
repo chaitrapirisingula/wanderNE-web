@@ -4,6 +4,7 @@ import HomePageImage from "../Images/HomePageImage.png";
 import Map from "../Components/Map";
 import '../Design/App.css';
 import '../Design/Home.css';
+import "@fontsource/oswald";
 
 function Home() {
   return (
@@ -17,13 +18,16 @@ function Home() {
         <img src={HomePageImage} alt="Wander Nebraska" className="home_image"/>
         </div>
         <div className="center_text">
-          <h1>Wander Nebraska</h1>
-          <div className="mission_statement">
-            <p>Preserving and celebrating Nebraska's rich history.</p>
+          <div className="title">
+            <p>Wander Nebraska</p>
           </div>
+          
         </div>
       </div>
       <div className="home_overview">
+        <div className="mission_statement">
+          <p>Preserving and celebrating Nebraska's rich history.</p>
+        </div>
         <div className="about">
           <h1>About</h1>
           explain program

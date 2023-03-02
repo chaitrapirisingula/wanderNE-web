@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@coreui/react": "^4.5.2",
+    "@fontsource/oswald": "^4.5.12",
     "@react-google-maps/api": "^2.18.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
