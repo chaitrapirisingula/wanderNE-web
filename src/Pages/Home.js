@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import HomePageImage from "../Images/HomePageImage.png";
-import Map from "../Components/Map";
 import '../Design/App.css';
 import '../Design/Home.css';
 import "@fontsource/oswald";
@@ -21,7 +20,6 @@ function Home() {
           <div className="title">
             <p>Wander Nebraska</p>
           </div>
-          
         </div>
       </div>
       <div className="home_overview">
@@ -36,14 +34,14 @@ function Home() {
           <h1>Popular Sites</h1>
           add slideshow of some sort
         </div>
-        <div className="map_section">
-          <h1>Regions</h1>
-          <Map/>
+        <div className="about">
+          <h1>Interested?</h1>
+          add contact info and form to include your site and donate info
         </div>
       </div>
-      {/* <iframe title="map" 
+      <iframe title="map" 
             src="https://www.google.com/maps/d/u/2/embed?mid=1-uHcFfG-9kz3G_CiX6NAoxrS4mlAfyE&ehbc=2E312F" 
-              width="500rem" height="380rem"></iframe> */}
+              width="500rem" height="380rem"></iframe>
     </div>
   );
 }

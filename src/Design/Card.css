@@ -1,5 +1,42 @@
 .card {
-    box-shadow: 0 2px 10px gray;
+    box-shadow: 0 2px 10px grey;
+    display: flex;
+}
+
+.Metro {
+    box-shadow: 0 2px 10px cyan;
+    display: flex;
+}
+
+.SouthEast {
+    box-shadow: 0 2px 10px green;
+    display: flex;
+}
+
+.SouthWest {
+    box-shadow: 0 2px 10px skyblue;
+    display: flex;
+}
+
+.SouthCentral {
+    box-shadow: 0 2px 10px seagreen;
+    display: flex;
+}
+
+
+.NorthEast {
+    box-shadow: 0 2px 10px blue;
+    display: flex;
+}
+
+
+.Sandhills {
+    box-shadow: 0 2px 10px yellowgreen;
+    display: flex;
+}
+
+.Panhandle {
+    box-shadow: 0 2px 10px coral;
     display: flex;
 }
 
@@ -24,7 +61,7 @@
     font-weight: bold;
     font-size: 1rem;
     margin: 1rem;
-    border: 2px solid #000080;
+    border: 2px solid;
     background: transparent;
     color: #000080;
     text-align: center;

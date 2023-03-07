@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import ImageMapper from 'react-img-mapper';
 import RegionsMap from "../Images/RegionsMap.png";
 import "../Design/Map.css";
 
-const Map = () => {
+function Map() {
 
     const MAP = {
         name: "nebraska-regions",
@@ -36,16 +37,23 @@ const Map = () => {
     }
   
     return (
-        <div className="map">
-            <div className="map_container">
-                <ImageMapper src={RegionsMap} map={MAP} width={700} height={300}
-                    onClick={area => clicked(area)}
-                    onMouseEnter={area => enterArea(area)}
-                    onImageClick={evt => clickedOutside(evt)}
-                />
-            </div>
-            <div className="region_info">
-                {currArea.name}
+        <div className="App">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Regions</title>
+            </Helmet>
+            <h1>Regions</h1>
+            <div className="map">
+                <div className="map_container">
+                    <ImageMapper src={RegionsMap} map={MAP} width={700} height={300}
+                        onClick={area => clicked(area)}
+                        onMouseEnter={area => enterArea(area)}
+                        onImageClick={evt => clickedOutside(evt)}
+                    />
+                </div>
+                <div className="region_info">
+                    {currArea.name}
+                </div>
             </div>
         </div>
     );
