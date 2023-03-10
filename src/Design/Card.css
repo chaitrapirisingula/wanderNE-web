@@ -55,6 +55,10 @@
     padding: 1rem;
 }
 
+.card_description {
+    padding-bottom: 2rem;
+}
+
 .card_button {
     cursor: pointer;
     padding: 10px 60px;

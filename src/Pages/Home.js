@@ -30,18 +30,14 @@ function Home() {
           <h1>About</h1>
           explain program
         </div>
-        <div className="slideshow">
-          <h1>Popular Sites</h1>
-          add slideshow of some sort
-        </div>
         <div className="about">
           <h1>Interested?</h1>
           add contact info and form to include your site and donate info
         </div>
       </div>
       <iframe title="map" 
-            src="https://www.google.com/maps/d/u/2/embed?mid=1-uHcFfG-9kz3G_CiX6NAoxrS4mlAfyE&ehbc=2E312F" 
-              width="500rem" height="380rem"></iframe>
+        src="https://www.google.com/maps/d/u/0/embed?mid=1JwM25eZ3A1H9Wyb4lJLhnYfZ9kxn0YQ&ehbc=2E312F" width="640" height="380">
+      </iframe>
     </div>
   );
 }

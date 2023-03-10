@@ -13,3 +13,11 @@
 .region_info {
     text-align: center;
 }
+
+.slideshow {
+    padding: 5%;
+    display: inline-flex;
+    gap: 2rem;
+    justify-content: center;
+    overflow-x: scroll;
+}
